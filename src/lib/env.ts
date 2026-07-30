@@ -1,4 +1,4 @@
-const getEnv = (key: string): string => {
+const getEnv = (key: 'NEXT_PUBLIC_SUPABASE_URL' | 'NEXT_PUBLIC_SUPABASE_ANON_KEY'): string => {
   const value = process.env[key]
 
   if (!value) {
@@ -10,10 +10,13 @@ const getEnv = (key: string): string => {
   return value
 }
 
-export const env = {
+export const getPublicEnv = () => ({
   NEXT_PUBLIC_SUPABASE_URL: getEnv('NEXT_PUBLIC_SUPABASE_URL'),
   NEXT_PUBLIC_SUPABASE_ANON_KEY: getEnv('NEXT_PUBLIC_SUPABASE_ANON_KEY'),
-  SUPABASE_SERVICE_ROLE_KEY: getEnv('SUPABASE_SERVICE_ROLE_KEY'),
+})
+
+export const isSupabaseConfigured = () => {
+  return Boolean(process.env.NEXT_PUBLIC_SUPABASE_URL && process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY)
 }
 
-export type Env = typeof env
+export type PublicEnv = ReturnType<typeof getPublicEnv>
