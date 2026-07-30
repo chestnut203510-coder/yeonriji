@@ -1,0 +1,77 @@
+const config = {
+  content: ['./src/**/*.{js,ts,jsx,tsx,mdx}'],
+  theme: {
+    extend: {
+      colors: {
+        primary: {
+          50: '#f5f7ff',
+          100: '#e8eeff',
+          200: '#c8d4ff',
+          300: '#9aafff',
+          400: '#6e88ff',
+          500: '#4b67f7',
+          600: '#3a4ddb',
+          700: '#323fbc',
+          800: '#2c36a0',
+          900: '#282f86',
+        },
+        surface: {
+          50: '#fcfcff',
+          100: '#f7f7fb',
+          200: '#efeff5',
+          300: '#e5e5ee',
+          400: '#d7d8e4',
+          500: '#c0c2d3',
+          600: '#9ea1b3',
+          700: '#7a7f90',
+          800: '#5d6171',
+          900: '#3e4253',
+        },
+        accent: {
+          50: '#fff7f3',
+          100: '#ffe8db',
+          200: '#ffd0b8',
+          300: '#ffb088',
+          400: '#ff8a55',
+          500: '#fd6c35',
+          600: '#e55622',
+          700: '#b9431f',
+          800: '#8f3621',
+          900: '#6e2d23',
+        },
+      },
+      fontFamily: {
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+        display: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      spacing: {
+        1: '0.25rem',
+        2: '0.5rem',
+        3: '0.75rem',
+        4: '1rem',
+        5: '1.25rem',
+        6: '1.5rem',
+        8: '2rem',
+        10: '2.5rem',
+        12: '3rem',
+        16: '4rem',
+      },
+      borderRadius: {
+        none: '0',
+        sm: '0.375rem',
+        md: '0.75rem',
+        lg: '1rem',
+        xl: '1.5rem',
+        full: '9999px',
+      },
+      boxShadow: {
+        soft: '0 10px 30px rgba(45, 49, 66, 0.08)',
+        floating: '0 18px 60px rgba(45, 49, 66, 0.12)',
+        inset: 'inset 0 1px 2px rgba(255,255,255,0.5)',
+      },
+    },
+  },
+  plugins: [],
+}
+
+export default config
